@@ -2,11 +2,11 @@ function letterCombinations(input_digit) {
   let arr=[0,1,'abc','def','ghi','jkl','mno','pqrs','tuv','wxyz']
 	let res=[]
 	helper(arr,input_digit,res,0,0,"")
-	return arr
+	return ress
 }
 function helper(arr,input_digit,res,index1,index2,str){
 	if(str.length===input_digit.length){
-		arr.push(str)
+		res.push(str)
 		return
 	}
 
