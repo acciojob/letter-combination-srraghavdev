@@ -7,6 +7,7 @@ function letterCombinations(input_digit) {
 function helper(arr,input_digit,res,index1,str){
 	if(str.length===input_digit.length){
 		res.push(str)
+		console.log(str)
 		return
 	}
 	if(index1===n){
