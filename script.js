@@ -7,18 +7,17 @@ function letterCombinations(input_digit) {
 function helper(arr,input_digit,res,index1,str){
 	if(str.length===input_digit.length){
 		res.push(str)
-		console.log(str)
 		return
 	}
-	if(index1===n){
+	if(index1===input_digit.length){
 		return
 	}
 	let match = parseInt(input_digit[index1])
 	let ss = arr[match]
-	for(let i=0;i<match.length;i++){
+	for(let i=0;i<ss.length;i++){
 		str=str+ss[i]
 		helper(arr,input_digit,res,index1+1,str)
-		str=str.splice(0,str.length-1)
+		str=str.substring(0,str.length-1)
 	}
 }
 
