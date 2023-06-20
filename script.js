@@ -2,7 +2,7 @@ let res=[]
 function letterCombinations(input_digit) {
   let arr=[0,1,'abc','def','ghi','jkl','mno','pqrs','tuv','wxyz']
 	helper(arr,input_digit,res,0,"")
-	return res
+	return res.sort()
 }
 function helper(arr,input_digit,res,index1,str){
 	if(str.length===input_digit.length){
